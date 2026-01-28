@@ -1229,10 +1229,6 @@ body {
         padding: 1.5rem;
     }
 
-    .roadmap-content::before {
-        display: none;
-    }
-
     .roadmap-content h3 {
         font-size: 1.2rem;
     }
