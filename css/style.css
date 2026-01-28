@@ -1198,43 +1198,71 @@ body {
     .roadmap {
         display: block;
         padding: 1rem 0;
+        max-width: 100%;
     }
 
     .roadmap::before {
-        left: 2rem;
+        left: 1.5rem;
+        width: 3px;
     }
 
     .roadmap-item {
         flex-direction: column !important;
         align-items: flex-start;
-        margin-bottom: 2rem;
-        padding-left: 4rem;
+        margin-bottom: 2.5rem;
+        padding-left: 3.5rem;
+        position: relative;
+        min-height: 80px;
+        display: flex;
+        justify-content: center;
     }
 
     .roadmap-dot {
         position: absolute;
         left: 0;
-        top: 0;
+        top: 50%;
         margin: 0;
+        z-index: 3;
+        transform: translateY(-50%);
     }
 
     .roadmap-number {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        box-shadow: 0 3px 15px rgba(255, 107, 53, 0.25);
+    }
+
+    .roadmap-number::before {
+        display: none;
     }
 
     .roadmap-content {
         width: 100%;
         padding: 1.5rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        margin-left: 0;
+        position: relative;
+        border-left: 4px solid #ff6b35;
+    }
+
+    .roadmap-content::before {
+        display: none;
     }
 
     .roadmap-content h3 {
         font-size: 1.2rem;
+        color: #ff6b35;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
     }
 
     .roadmap-content p {
         font-size: 0.95rem;
+        line-height: 1.6;
+        color: #555;
     }
 
     .stats-grid {
